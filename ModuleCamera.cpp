@@ -150,3 +150,13 @@ void ModuleCamera::move(const CameraMovement& movementType)
 			break;
 	}
 }
+
+float4x4 ModuleCamera::GetViewMatrix()
+{
+	return frustum.ViewMatrix();
+}
+
+float4x4 ModuleCamera::GetProjectionMatrix()
+{
+	return frustum.ProjectionMatrix();
+}

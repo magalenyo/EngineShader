@@ -12,6 +12,7 @@ class ModuleProgram;
 class ModuleRenderExercise;
 class ModuleCamera;
 class ModuleTime;
+class ModuleTexture;
 
 class Application
 {
@@ -31,7 +32,9 @@ public:
 	ModuleCamera* camera = nullptr;
 	ModuleTime* time = nullptr;
 	ModuleProgram* program = nullptr;
+	ModuleTexture* texture = nullptr;
 	ModuleRenderExercise* exercise = nullptr;
+
 
 private:
 

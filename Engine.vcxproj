@@ -74,14 +74,14 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>false</SDLCheck>
       <ExceptionHandling>Sync</ExceptionHandling>
-      <AdditionalIncludeDirectories>./MathGeoLib-master/src;./glew-2.1.0/include;./SDL/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./MathGeoLib-master/src;./glew-2.1.0/include;./SDL/include;./DevIL/include</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName>$(TEMP)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>./MathGeoLib-master\src;./glew-2.1.0/lib/Release/Win32</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glew32.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./MathGeoLib-master\src;./glew-2.1.0/lib/Release/Win32;./DevIL/lib/x86/Release</AdditionalLibraryDirectories>
+      <AdditionalDependencies>DevIL.lib;Ilu.lib;Ilut.lib;glew32.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ProjectReference>
       <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
@@ -226,6 +226,7 @@
     <ClInclude Include="ModuleProgram.h" />
     <ClInclude Include="ModuleRender.h" />
     <ClInclude Include="ModuleRenderExercise.h" />
+    <ClInclude Include="ModuleTexture.h" />
     <ClInclude Include="ModuleTime.h" />
     <ClInclude Include="ModuleWindow.h" />
   </ItemGroup>
@@ -280,10 +281,15 @@
     <ClCompile Include="ModuleProgram.cpp" />
     <ClCompile Include="ModuleRender.cpp" />
     <ClCompile Include="ModuleRenderExercise.cpp" />
+    <ClCompile Include="ModuleTexture.cpp" />
     <ClCompile Include="ModuleTime.cpp" />
     <ClCompile Include="ModuleWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Game\shaders\FragmentShader.glsl" />
+    <None Include="Game\shaders\FragmentShaderTexture.glsl" />
+    <None Include="Game\shaders\VertexShader.glsl" />
+    <None Include="Game\shaders\VertexShaderTexture.glsl" />
     <None Include="MathGeoLib-master\src\emscripten\library_system.js" />
     <None Include="MathGeoLib-master\src\Geometry\KDTree.inl" />
     <None Include="MathGeoLib-master\src\Geometry\QuadTree.inl" />

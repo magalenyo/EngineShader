@@ -27,6 +27,9 @@ public:
 	bool CleanUp();
 
 	void move(const CameraMovement &movementType);
+
+	float4x4 GetViewMatrix();
+	float4x4 GetProjectionMatrix();
 	
 
 private:

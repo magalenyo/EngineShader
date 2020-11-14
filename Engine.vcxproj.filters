@@ -137,6 +137,7 @@
     <ClCompile Include="ModuleTime.cpp" />
     <ClCompile Include="ModuleProgram.cpp" />
     <ClCompile Include="ModuleRenderExercise.cpp" />
+    <ClCompile Include="ModuleTexture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
@@ -377,6 +378,7 @@
     <ClInclude Include="ModuleTime.h" />
     <ClInclude Include="ModuleProgram.h" />
     <ClInclude Include="ModuleRenderExercise.h" />
+    <ClInclude Include="ModuleTexture.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="MathGeoLib">
@@ -396,6 +398,9 @@
     </Filter>
     <Filter Include="MathGeoLib\Time">
       <UniqueIdentifier>{e1a7341b-f60c-4c1b-8975-c3ca88ea8ab6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{8394f06a-f848-4e1e-b162-7bbfb2cc3500}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -422,6 +427,18 @@
     </None>
     <None Include="MathGeoLib-master\src\emscripten\library_system.js">
       <Filter>MathGeoLib\emscripten</Filter>
+    </None>
+    <None Include="Game\shaders\FragmentShaderTexture.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Game\shaders\VertexShader.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Game\shaders\VertexShaderTexture.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Game\shaders\FragmentShader.glsl">
+      <Filter>Shaders</Filter>
     </None>
   </ItemGroup>
 </Project>

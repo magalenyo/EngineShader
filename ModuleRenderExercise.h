@@ -14,11 +14,15 @@ public:
 
 private:
 	unsigned CreateTriangleVBO();
+	unsigned CreateTriangleVBOTexture();
 	void DestroyVBO(unsigned vbo);
 	void RenderVBO(unsigned vbo);
+	void RenderVBOTexture(unsigned vbo);
 
 	unsigned vbo;
+	unsigned vboTexture;
 	unsigned program;
+	unsigned programTexture;
 	
 };
 
