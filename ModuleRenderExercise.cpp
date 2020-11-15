@@ -162,7 +162,7 @@ void ModuleRenderExercise::RenderVBOTexture(unsigned _vbo)
 	;
 	float4x4 view = App->camera->GetViewMatrix();
 	float4x4 proj = App->camera->GetProjectionMatrix();
-	glUseProgram(programTexture);
+	
 	glUniformMatrix4fv(glGetUniformLocation(programTexture, "model"), 1, GL_TRUE, &model[0][0]);
 	glUniformMatrix4fv(glGetUniformLocation(programTexture, "view"), 1, GL_TRUE, &view[0][0]);
 	glUniformMatrix4fv(glGetUniformLocation(programTexture, "proj"), 1, GL_TRUE, &proj[0][0]);
@@ -170,6 +170,7 @@ void ModuleRenderExercise::RenderVBOTexture(unsigned _vbo)
 	glActiveTexture(GL_TEXTURE0);
 	//glBindTexture(GL_TEXTURE_2D, texture_object);
 	glUniform1i(glGetUniformLocation(programTexture, "mytexture"), 0);
+	glUseProgram(programTexture);
 	// 1 triangle to draw = 3 vertices
 	glDrawArrays(GL_TRIANGLES, 0, 3);
 
