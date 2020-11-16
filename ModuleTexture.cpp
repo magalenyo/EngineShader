@@ -67,5 +67,11 @@ bool ModuleTexture::LoadTexture(const char* imagePath)
 	  we can release memory used by image. */
 
 	// THIS NEEDS TO BE RETURNED
+	textureId = newTextureId;
 	//return newTextureId;
+}
+
+GLuint ModuleTexture::GetTextureID() const
+{
+	return textureId;
 }

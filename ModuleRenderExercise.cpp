@@ -65,7 +65,7 @@ bool ModuleRenderExercise::Init()
     program = App->program->CreateProgram(vertexShader, fragmentShader);
 
 	// Inits the texture shaders
-	App->texture->LoadTexture("./resources/lenna.png");
+	App->textures->LoadTexture("./resources/lenna.png");
 	CreateTriangleVBOTexture();
 	unsigned vertexShaderTexture = App->program->CompileShader(GL_VERTEX_SHADER, "./shaders/VertexShaderTexture.glsl");
 	unsigned fragmentShaderTexture = App->program->CompileShader(GL_FRAGMENT_SHADER, "./shaders/FragmentShaderTexture.glsl");
@@ -152,14 +152,17 @@ void ModuleRenderExercise::RenderVBOTexture(unsigned _vbo)
 	glEnableVertexAttribArray(1);
 	// size = 3 float per vertex
 	// stride = 0 is equivalent to stride = sizeof(float)*3
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
+
 	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0,
 		(void*) (sizeof(float) * 3 * 3) // buffer offset
 	);
 
-	float4x4 model = float4x4::FromTRS(float3(2.0f, 0.0f, 0.0f),
-		float4x4::RotateZ(pi / 4.0f),
-		float3(2.0f, 1.0f, 0.0f));
+	float4x4 model = float4x4::FromTRS(float3(0.0f, 1.0f, -2.0f),
+		float4x4::RotateZ(0),
+		float3(1.0f, 1.0f, 1.0f));
 	;
+	
 	float4x4 view = App->camera->GetViewMatrix();
 	float4x4 proj = App->camera->GetProjectionMatrix();
 	
@@ -168,7 +171,7 @@ void ModuleRenderExercise::RenderVBOTexture(unsigned _vbo)
 	glUniformMatrix4fv(glGetUniformLocation(programTexture, "proj"), 1, GL_TRUE, &proj[0][0]);
 
 	glActiveTexture(GL_TEXTURE0);
-	//glBindTexture(GL_TEXTURE_2D, texture_object);
+	glBindTexture(GL_TEXTURE_2D, App->textures->GetTextureID());
 	glUniform1i(glGetUniformLocation(programTexture, "mytexture"), 0);
 	glUseProgram(programTexture);
 	// 1 triangle to draw = 3 vertices
