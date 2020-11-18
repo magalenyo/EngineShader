@@ -32,7 +32,7 @@ public:
 	ModuleCamera* camera = nullptr;
 	ModuleTime* time = nullptr;
 	ModuleProgram* program = nullptr;
-	ModuleTexture* texture = nullptr;
+	ModuleTexture* textures = nullptr;
 	ModuleRenderExercise* exercise = nullptr;
 
 
