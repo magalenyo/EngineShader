@@ -102,13 +102,23 @@ unsigned ModuleRenderExercise::CreateTriangleVBO()
 unsigned ModuleRenderExercise::CreateTriangleVBOTexture()
 {
 	float buffer_data[] = {
-		-1.0f, -1.0f, 0.0f, //  v0 pos
-		1.0f, -1.0f, 0.0f, // v1 pos
-		0.0f, 1.0f, 0.0f, //  v2 pos
+		-0.5f, 0.0f, 0.0f, //  v0 pos
+		 0.5f, 0.0f, 0.0f, // v1 pos
+		-0.5f, 1.0f, 0.0f, //  v2 pos
+
+		 0.5f, 0.0f, 0.0f, //  v3 pos
+		 0.5f, 1.0f, 0.0f, // v4 pos
+		-0.5f, 1.0f, 0.0f, //  v5 pos
 
 		0.0f, 0.0f, //  v0 texcoord
 		1.0f, 0.0f, //  v1 texcoord
-		0.5f, 1.0f //  v2 texcoord
+		0.0f, 1.0f, //  v2 texcoord
+
+		1.0f, 0.0f, //  v3 texcoord
+		1.0f, 1.0f, //  v4 texcoord
+		0.0f, 1.0f //  v5 texcoord
+
+
 	};
 
 	glGenBuffers(1, &vboTexture);
@@ -155,7 +165,7 @@ void ModuleRenderExercise::RenderVBOTexture(unsigned _vbo)
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
 
 	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0,
-		(void*) (sizeof(float) * 3 * 3) // buffer offset
+		(void*) (sizeof(float) * 6 * 3) // buffer offset
 	);
 
 	float4x4 model = float4x4::FromTRS(float3(0.0f, 1.0f, -2.0f),
@@ -175,6 +185,6 @@ void ModuleRenderExercise::RenderVBOTexture(unsigned _vbo)
 	glUniform1i(glGetUniformLocation(programTexture, "mytexture"), 0);
 	glUseProgram(programTexture);
 	// 1 triangle to draw = 3 vertices
-	glDrawArrays(GL_TRIANGLES, 0, 3);
+	glDrawArrays(GL_TRIANGLES, 0, 6);
 
 }

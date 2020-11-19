@@ -32,6 +32,8 @@ bool ModuleTexture::LoadTexture(const char* imagePath)
 {
 
 	// hay que llamar al iluFlipImage antes de coger el data
+
+	//iluFlipImage();
 	ILuint newImageId;
 	ILboolean success;
 	GLuint newTextureId;

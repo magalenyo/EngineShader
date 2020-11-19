@@ -13,7 +13,7 @@ public:
 	void LoadMaterials(const aiScene* scene);
 
 private:
-	std::vector<int> materials; // array de texturas
-	std::vector<int> mesehes;	// array de mallas
+	std::vector<unsigned> materials; // array de texturas
+	std::vector<unsigned> mesehes;	// array de mallas
 };
 

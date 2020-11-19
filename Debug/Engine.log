@@ -1,28 +1,2 @@
-﻿  Application.cpp
-  Polyhedron.cpp
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\MathGeoLib-master\src\Math\float4d.h(197,3): warning C4244: 'argument': conversion from 'const double' to 'float', possible loss of data
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\MathGeoLib-master\src\Math\float4d.h(198,10): warning C4244: 'argument': conversion from 'const double' to 'float', possible loss of data
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\MathGeoLib-master\src\Math\float4d.h(203,3): warning C4244: 'argument': conversion from 'const double' to 'float', possible loss of data
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\MathGeoLib-master\src\Math\float4d.h(204,10): warning C4244: 'argument': conversion from 'const double' to 'float', possible loss of data
-  ModuleCamera.cpp
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\ModuleCamera.cpp(22,63): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\ModuleCamera.cpp(140,83): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\ModuleCamera.cpp(140,59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\ModuleCamera.cpp(140,35): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\ModuleCamera.cpp(177,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\ModuleCamera.cpp(183,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\ModuleCamera.cpp(200,110): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\ModuleCamera.cpp(206,111): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\ModuleCamera.cpp(212,68): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\ModuleCamera.cpp(219,67): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\ModuleCamera.cpp(247,68): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\ModuleCamera.cpp(252,41): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\ModuleCamera.cpp(257,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  ModuleInput.cpp
-  ModuleRenderExercise.cpp
-  Generating Code...
-  grisu3.c
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\MathGeoLib-master\src\Math\grisu3.c(323,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\MathGeoLib-master\src\Math\grisu3.c(348,10): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\MathGeoLib-master\src\Math\grisu3.c(365,10): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+﻿  ModuleRenderExercise.cpp
   Engine.vcxproj -> C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\Debug\EngineMaster.exe

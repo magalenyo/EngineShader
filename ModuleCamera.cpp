@@ -136,9 +136,9 @@ update_status ModuleCamera::Update()
 	
 	#ifdef _DEBUG	
 	//LOG(frustum.ToString().c_str());
-	float3 rotDegree = frustum.ViewMatrix().ToEulerXYZ();
-	rotDegree = float3(rotDegree.x * RADTODEG, rotDegree.y * RADTODEG, rotDegree.z * RADTODEG);
-	LOG(rotDegree.ToString().c_str());
+	//float3 rotDegree = frustum.ViewMatrix().ToEulerXYZ();
+	//rotDegree = float3(rotDegree.x * RADTODEG, rotDegree.y * RADTODEG, rotDegree.z * RADTODEG);
+	//LOG(rotDegree.ToString().c_str());
 	#endif // _DEBUG
 
 	return UPDATE_CONTINUE;
