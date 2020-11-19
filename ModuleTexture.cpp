@@ -1,5 +1,6 @@
 #include "ModuleTexture.h"
 #include <IL/il.h>
+#include <IL/ilu.h>
 #include <GL/GL.h>
 
 ModuleTexture::ModuleTexture()
@@ -33,7 +34,7 @@ bool ModuleTexture::LoadTexture(const char* imagePath)
 
 	// hay que llamar al iluFlipImage antes de coger el data
 
-	//iluFlipImage();
+	
 	ILuint newImageId;
 	ILboolean success;
 	GLuint newTextureId;
@@ -42,6 +43,7 @@ bool ModuleTexture::LoadTexture(const char* imagePath)
 	success = ilLoadImage(imagePath); /* Loading of image "image.jpg" */
 	if (success) /* If no error occured: */
 	{
+		iluFlipImage();
 		success = ilConvertImage(IL_RGB, IL_UNSIGNED_BYTE); /* Convert every colour component into
 		  unsigned byte. If your image contains alpha channel you can replace IL_RGB with IL_RGBA */
 		if (!success)

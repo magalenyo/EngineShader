@@ -51,7 +51,7 @@ private:
 	Frustum frustum;
 	float verticalSpeed = 1.0f;
 	float horizontalSpeed = 1.0f;
-	float rotationSpeed = 30.0f;
+	float rotationSpeed = 60.0f;
 
 
 	void ResetSpeed();

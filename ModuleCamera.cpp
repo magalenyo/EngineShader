@@ -231,7 +231,7 @@ void ModuleCamera::ResetSpeed()
 {
 	verticalSpeed = 1.0f;
 	horizontalSpeed = 1.0f;
-	rotationSpeed = 10.0f;
+	rotationSpeed = 60.0f;
 }
 
 void ModuleCamera::IncreaseSpeed()

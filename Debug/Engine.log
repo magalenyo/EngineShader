@@ -1,2 +1,3 @@
-﻿  ModuleRenderExercise.cpp
+﻿  ModuleTexture.cpp
+C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\ModuleTexture.cpp(76): warning C4715: 'ModuleTexture::LoadTexture': not all control paths return a value
   Engine.vcxproj -> C:\Users\MiguelÁngelBuenoRive\Desktop\UPC\C++ for Video Games\EngineShader\Debug\EngineMaster.exe
