@@ -117,8 +117,6 @@ unsigned ModuleRenderExercise::CreateTriangleVBOTexture()
 		1.0f, 0.0f, //  v3 texcoord
 		1.0f, 1.0f, //  v4 texcoord
 		0.0f, 1.0f //  v5 texcoord
-
-
 	};
 
 	glGenBuffers(1, &vboTexture);
@@ -168,11 +166,7 @@ void ModuleRenderExercise::RenderVBOTexture(unsigned _vbo)
 		(void*) (sizeof(float) * 6 * 3) // buffer offset
 	);
 
-	float4x4 model = float4x4::FromTRS(float3(0.0f, 1.0f, -2.0f),
-		float4x4::RotateZ(0),
-		float3(1.0f, 1.0f, 1.0f));
-	;
-	
+	float4x4 model = float4x4::identity;
 	float4x4 view = App->camera->GetViewMatrix();
 	float4x4 proj = App->camera->GetProjectionMatrix();
 	

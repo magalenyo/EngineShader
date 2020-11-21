@@ -43,7 +43,7 @@ bool ModuleTexture::LoadTexture(const char* imagePath)
 	success = ilLoadImage(imagePath); /* Loading of image "image.jpg" */
 	if (success) /* If no error occured: */
 	{
-		iluFlipImage();
+		
 		success = ilConvertImage(IL_RGB, IL_UNSIGNED_BYTE); /* Convert every colour component into
 		  unsigned byte. If your image contains alpha channel you can replace IL_RGB with IL_RGBA */
 		if (!success)
@@ -52,6 +52,7 @@ bool ModuleTexture::LoadTexture(const char* imagePath)
 			return false;
 		}
 		// STORES IN GPU
+		iluFlipImage();
 		glGenTextures(1, &newTextureId); /* Texture name generation */
 		glBindTexture(GL_TEXTURE_2D, newTextureId); /* Binding of texture name */
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); /* We will use linear
